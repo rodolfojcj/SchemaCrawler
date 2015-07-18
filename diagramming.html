@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>SchemaCrawler - SchemaCrawler</title>
+		<title>SchemaCrawler - SchemaCrawler Database Diagramming</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -49,7 +49,7 @@
 <link rel="stylesheet" href="./css/sc_site.css"/>
 	</head>
 
-	<body class="page-index project-schemacrawler-site" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-diagramming project-schemacrawler-site" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -64,10 +64,10 @@
 						<ul class="nav pull-right">
 							<li ><a href="http://sourceforge.net/p/schemacrawler/donate/" title="Donations" class="externalLink">Donations</a></li>
 							<li ><a href="http://sourceforge.net/projects/schemacrawler/files/" title="Download" class="externalLink">Download</a></li>
-							<li class="dropdown active">
+							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">SchemaCrawler <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li class="active"><a href="" title="About SchemaCrawler">About SchemaCrawler</a></li>
+									<li ><a href="index.html" title="About SchemaCrawler">About SchemaCrawler</a></li>
 									<li ><a href="readme.html" title="Readme">Readme</a></li>
 									<li ><a href="who-uses.html" title="Who Uses">Who Uses</a></li>
 									<li ><a href="database-support.html" title="Database System Support">Database System Support</a></li>
@@ -76,12 +76,12 @@
 									<li ><a href="http://sourceforge.net/p/schemacrawler/donate/" title="Support SchemaCrawler" class="externalLink">Support SchemaCrawler</a></li>
 								</ul>
 							</li>
-							<li class="dropdown">
+							<li class="dropdown active">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">Special Features <b class="caret"></b></a>
 								<ul class="dropdown-menu">
 									<li ><a href="output.html" title="Text Output">Text Output</a></li>
 									<li ><a href="schemacrawler_grep.html" title="Grep">Grep</a></li>
-									<li ><a href="diagramming.html" title="Diagramming">Diagramming</a></li>
+									<li class="active"><a href="" title="Diagramming">Diagramming</a></li>
 									<li ><a href="scripting.html" title="Scripting">Scripting</a></li>
 									<li ><a href="lint.html" title="Lint">Lint</a></li>
 									<li ><a href="offline.html" title="Offline Snapshots">Offline Snapshots</a></li>
@@ -141,78 +141,38 @@
 		<div class="span12">
 			<div class="body-content">
 <div class="page-header">
- <h1>SchemaCrawler</h1>
+ <h1>SchemaCrawler Database Diagramming</h1>
 </div> 
-<p>SchemaCrawler is a free database schema discovery and comprehension tool. SchemaCrawler has a good mix useful features for data governance. You can <a href="schemacrawler_grep.html">search for database schema objects</a> using regular expressions, and output the schema and data in a readable text format. The output serves for database documentation, and is designed to be <a class="externalLink" href="http://en.wikipedia.org/wiki/Diff">diff-ed</a> against other database schemas. SchemaCrawler also generates <a href="diagramming.html">schema diagrams.</a> You can <a href="scripting.html">execute scripts</a> in any standard scripting language against your database. You can find potential schema design issues with <a href="lint.html">lint.</a></p> 
-<p>SchemaCrawler supports almost any database that has a JDBC driver, but for convenience is <a href="database-support.html">bundled with drivers</a> for some commonly used RDBMS systems. SchemaCrawler works with any operating system that supports Java SE 8 or better.</p> 
-<p>Consider supporting SchemaCrawler by making a <a class="externalLink" href="http://sourceforge.net/donate/index.php?group_id=148383">donation</a>.</p> 
-<div class="section"> 
- <h2 id="SchemaCrawler_Command-line">SchemaCrawler Command-line</h2> 
- <p>SchemaCrawler comes with a set of command-line tools that allow database metadata to be output as <a href="snapshot-examples/snapshot.text">plain text,</a> <a href="snapshot-examples/snapshot.csv">comma-separated text (CSV),</a> <a href="snapshot-examples/snapshot.html">HTML5,</a> <a href="snapshot-examples/snapshot.htmlx">HTML5 with embedded diagrams,</a> or <a href="snapshot-examples/snapshot.json">JavaScript object notation (JSON).</a> The HTML5 output is a combination of valid XML (that can be manipulated by XML tools or XSLT), and HTML that can be viewed in a browser. All formats are designed to be easy to <a class="externalLink" href="http://en.wikipedia.org/wiki/Diff">diff</a> , or find differences with other schemas that may have been output in the same format.</p> 
- <p>SchemaCrawler has <a href="schemacrawler_grep.html">grep</a> functionality that allows you to search for table and column names using regular expressions. SchemaCrawler is capable of creating entity-relationship diagrams in <a class="externalLink" href="http://www.graphviz.org/doc/info/lang.html">DOT format,</a> which <a class="externalLink" href="http://www.graphviz.org/">GraphViz</a> can convert into <a href="diagramming.html">schema diagrams.</a> SchemaCrawler has powerful scripting ability, using JavaScript, Groovy, Ruby or Python. A live connection is provided to the script context to allow you to select from or even modify your database. Examples are provided for all of these with the <a class="externalLink" href="http://sourceforge.net/projects/schemacrawler/files/">download</a>.</p> 
- <p>SchemaCrawler is integrated with, and allows you to write templates to generate SQL scripts or any other text output, using templating engines, such as <a class="externalLink" href="http://velocity.apache.org/">Apache Velocity</a> or <a class="externalLink" href="http://freemarker.org/">&lt;FreeMarker&gt;</a> . However, you will need to download Apache Velocity or &lt;FreeMarker&gt; separately, since these are not part of the SchemaCrawler download.</p> 
- <p>Complete SchemaCrawler command-line help is available with the -h or -help command-line options.</p> 
-</div> 
-<div class="section"> 
- <h2 id="SchemaCrawler_API">SchemaCrawler API</h2> 
- <p>SchemaCrawler is also a Java API that makes working with database metadata as easy as working with plain old Java objects. Java programmers need to access database metadata</p> 
- <ul> 
-  <li>in order to dynamically generate SQL statements</li> 
-  <li>when programmatically determining the capabilities of a given RDBMS</li> 
-  <li>when finding the names and types of tables and columns in the database</li> 
- </ul> 
- <p>Programmers can obtain database metadata using JDBC, but with the raw JDBC API database metadata is returned as result sets, not Java objects. Also, programmers are still responsible for managing resources, mapping into object structures, and handling exceptions. This makes using the JDBC API very cumbersome when it comes to metadata. Furthermore, the JDBC API is not very consistent. For example, to find the type of a table, you would look at the <tt>TABLE_TYPE</tt> , which has a string value, but for procedures, <tt>PROCEDURE_TYPE</tt> is an integer. An another example, is the <tt>getCatalogs()</tt> call, which returns a result set with exactly one column, in contrast to <tt>getStringFunctions()</tt> which returns a string containing the list of function names, separated by commas.</p> 
- <p>SchemaCrawler attempts to solve some of these problems by providing an API that is consistent and usable. Database metadata is provided in the form of plain old Java objects (POJOs). Some examples of the consistency and usability of the SchemaCrawler API are that:</p> 
- <ul> 
-  <li><tt>Table</tt> is an object that has a collection of <tt>Column</tt> objects, without requiring you to make additional calls</li> 
-  <li>Booleans are Java booleans, not an integer, a string, or null versus not-null, and enumerated values are Java enums, not integers</li> 
-  <li>Lists are always Java lists - <tt>java.util.List</tt></li> 
-  <li>You don’t worry about database resources or exception handling</li> 
-  <li>You can use standard Java programming idioms - for example, you can access the <tt>Table</tt> object from a <tt>Column</tt> object using <tt>getParent()</tt></li> 
- </ul> 
- <p>SchemaCrawler goes beyond what is available using JDBC, and can provide information on database triggers, sequences and synonyms as well.</p> 
- <p><img src="http://www.gnu.org/graphics/lgplv3-88x31.png" alt="LGPL" /> SchemaCrawler is free and open-source API available under the LGPL license. SchemaCrawler is written in Java, making it operating system agnostic. Since it leverages JDBC, it is also database independent. It deliberately doesn’t have any RDBMS-specific code. SchemaCrawler allows you to compare structures between two different database servers, or even two different database systems, from different vendors.</p> 
- <p>The sample code below demonstrates just how easy it is to use SchemaCrawler:</p> 
- <div class="source"> 
-  <pre>
-final SchemaCrawlerOptions options = new SchemaCrawlerOptions();
-// Set what details are required in the schema - this affects the
-// time taken to crawl the schema
-options.setSchemaInfoLevel(SchemaInfoLevel.standard());
-
-final Catalog catalog = SchemaCrawlerUtility.getCatalog(connection, options);
-for (final Schema schema: catalog.getSchemas())
-{
-  System.out.println(schema);
-  for (final Table table: catalog.getTables(schema))
-  {
-    System.out.print(&quot;o--&gt; &quot; + table);
-    for (final Column column: table.getColumns())
-    {
-      System.out.println(&quot;     o--&gt; &quot; + column);
-    }
-  }
-}
+<p>SchemaCrawler generates database diagrams, using <a class="externalLink" href="http://www.graphviz.org/">Graphviz</a>. You can filter out tables, views, columns, stored procedure and functions based on regular expressions, using the <a href="faq.html#whats-schemacrawler-grep">grep</a> functionality.</p> 
+<p>SchemaCrawler is unique among database diagramming tools in that you do not need to know the table names or column names that you are interested in. All you need is a search expression, in the form of a regular expression. SchemaCrawler has powerful command-line options to match tables, and then find other related tables, whether they are parent or child tables. If your schema changes, you can simply regenerate the diagram, without having to know the exact changes that were made.</p> 
+<p>To use generate SchemaCrawler diagrams, for install <a class="externalLink" href="http://www.graphviz.org/">Graphviz</a>. Then you can run SchemaCrawler with the correct command-line options - for example, <tt>-command graph -outputformat png -outputfile=graph.png</tt> See the diagram example in the <a class="externalLink" href="https://sourceforge.net/projects/schemacrawler/files/SchemaCrawler%20Examples/">SchemaCrawler examples</a> download. An example of a SchemaCrawler database diagram is below.</p> 
+<p>You can provide additional GraphViz command-line options using the <tt>SC_GRAPHVIZ_OPTS</tt> environmental variable, or pass in the additional arguments using the <tt>SC_GRAPHVIZ_OPTS</tt> Java system property. SchemaCrawler does not set the dpi, or resolution of generated graphs. A useful GraphViz command-line option to set is <tt>-Gdpi=300</tt>.</p> 
+<p>You can decide whether foreign-key names, column ordinal numbers, and schema names are displayed by setting the following properties in the SchemaCrawler configuration file, <tt>schemacrawler.config.properties</tt>.</p> 
+<div class="source"> 
+ <pre>schemacrawler.format.show_ordinal_numbers=true
+schemacrawler.format.hide_foreignkey_names=true
+schemacrawler.format.show_unqualified_names=true
 </pre> 
- </div> 
- <p>For more details, please refer to the <a href="apidocs/index.html">javadocs</a>.</p> 
- <p>SchemaCrawler provides metadata for the following database objects: </p> 
+</div> 
+<p>For more details, see the diagram example in the <a class="externalLink" href="https://sourceforge.net/projects/schemacrawler/files/SchemaCrawler%20Examples/">SchemaCrawler examples</a> download.</p> 
+<p><a href="images/diagram.png" title="SchemaCrawler database diagram" data-lightbox="page"> <img src="images/diagram.png" width="200" alt="" /> </a></p> 
+<div class="section"> 
+ <h2 id="Database_Diagram_Options">Database Diagram Options</h2> 
+ <p>SchemaCrawler offers several options to change what you see on the database diagram. Here are a few variations:</p> 
  <ul> 
-  <li>Column data types</li> 
-  <li>Tables and views 
-   <ul> 
-    <li>Columns</li> 
-    <li>Primary keys</li> 
-    <li>Indexes</li> 
-    <li>Table constraints</li> 
-    <li>Triggers</li> 
-    <li>Foreign keys</li> 
-   </ul></li> 
-  <li>Routines, including functions and stored procedures</li> 
-  <li>Sequences</li> 
-  <li>Synonyms</li> 
-  <li>Privileges and grants</li> 
+  <li>Suppress schema names and foreign key names, using the <tt>-portablenames</tt> command-line option. <br /> <a href="images/diagram_2_portablenames.png" title="SchemaCrawler database diagram" data-lightbox="page"> <img src="images/diagram_2_portablenames.png" width="200" alt="" /> </a></li> 
+  <li>Show significant columns, such as primary and foreign key columns, and columns that are part of unique indexes. Use the <tt>-infolevel=standard -command=brief</tt>command-line option. <br /> <a href="images/diagram_3_important_columns.png" title="SchemaCrawler database diagram" data-lightbox="page"> <img src="images/diagram_3_important_columns.png" width="200" alt="" /> </a></li> 
+  <li>Show column ordinals, by setting configuration option <tt>schemacrawler.format.show_ordinal_numbers=true</tt> in the configuration file. <br /> <a href="images/diagram_4_ordinals.png" title="SchemaCrawler database diagram" data-lightbox="page"> <img src="images/diagram_4_ordinals.png" width="200" alt="" /> </a></li> 
+  <li>Display columns in alphabetical order, using the <tt>-sortcolumns</tt> command-line option. <br /> <a href="images/diagram_5_alphabetical.png" title="SchemaCrawler database diagram" data-lightbox="page"> <img src="images/diagram_5_alphabetical.png" width="200" alt="" /> </a></li> 
+  <li>Grep for columns, and also display outgoing relationships, using <tt>-grepcolumns=.*\\.BOOKS\\..*\\.ID</tt> as a command-line option. <br /> <a href="images/diagram_6_grep.png" title="SchemaCrawler database diagram" data-lightbox="page"> <img src="images/diagram_6_grep.png" width="200" alt="" /> </a></li> 
+  <li>Grep for columns, but only show matching tables, using -grepcolumns=.<i>\.BOOKS\..</i>\.ID and -only-matching as command-line options. <br /> <a href="images/diagram_7_grep_onlymatching.png" title="SchemaCrawler database diagram" data-lightbox="page"> <img src="images/diagram_7_grep_onlymatching.png" width="200" alt="" /> </a></li> 
+  <li>Do not show cardinality on the diagrams, to avoid clutter. Set configuration option <tt>schemacrawler.graph.show.primarykey.cardinality=false</tt> and <tt>schemacrawler.graph.show.foreignkey.cardinality=false</tt> in the configuration file. <br /> <a href="images/diagram_8_no_cardinality.png" title="SchemaCrawler database diagram" data-lightbox="page"> <img src="images/diagram_8_no_cardinality.png" width="200" alt="" /> </a></li> 
  </ul> 
+</div> 
+<div class="section"> 
+ <h2 id="SchemaCrawler_Diagrams_in_Use">SchemaCrawler Diagrams in Use</h2> 
+ <p>Schemacrawler database diagrams in use at the Scrum meeting at the Software Development Departement of <a class="externalLink" href="http://www.noumea.nc/">La Ville de Noum&eacute;a</a>. Photograph courtesy of Adrien Sales.</p> 
+ <p><a href="images/SchemaCrawler_Noumea.jpg" title="Schemacrawler database diagrams in use" data-lightbox="page"> <img src="images/SchemaCrawler_Noumea.jpg" width="200" alt="" /> </a></p> 
 </div>
 			</div>
 		</div>
@@ -229,8 +189,8 @@ for (final Schema schema: catalog.getSchemas())
 				<div class="span9 bottom-nav">
 					<ul class="nav nav-list">
 						<li class="nav-header">SchemaCrawler</li>
-						<li class="active">
-							<a href="#" title="About SchemaCrawler">About SchemaCrawler</a>
+						<li >
+							<a href="index.html" title="About SchemaCrawler">About SchemaCrawler</a>
 						</li>
 						<li >
 							<a href="readme.html" title="Readme">Readme</a>
@@ -257,8 +217,8 @@ for (final Schema schema: catalog.getSchemas())
 						<li >
 							<a href="schemacrawler_grep.html" title="Grep">Grep</a>
 						</li>
-						<li >
-							<a href="diagramming.html" title="Diagramming">Diagramming</a>
+						<li class="active">
+							<a href="#" title="Diagramming">Diagramming</a>
 						</li>
 						<li >
 							<a href="scripting.html" title="Scripting">Scripting</a>

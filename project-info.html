@@ -8,7 +8,7 @@
 
 	<head>
 		<meta charset="UTF-8" />
-		<title>SchemaCrawler - SchemaCrawler</title>
+		<title>SchemaCrawler - Project Information</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content="" />
 		<meta http-equiv="content-language" content="en" />
@@ -49,7 +49,7 @@
 <link rel="stylesheet" href="./css/sc_site.css"/>
 	</head>
 
-	<body class="page-index project-schemacrawler-site" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
+	<body class="page-project-info project-schemacrawler-site" data-spy="scroll" data-offset="60" data-target="#toc-scroll-target">
 
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
@@ -64,10 +64,10 @@
 						<ul class="nav pull-right">
 							<li ><a href="http://sourceforge.net/p/schemacrawler/donate/" title="Donations" class="externalLink">Donations</a></li>
 							<li ><a href="http://sourceforge.net/projects/schemacrawler/files/" title="Download" class="externalLink">Download</a></li>
-							<li class="dropdown active">
+							<li class="dropdown">
 								<a href="#" class="dropdown-toggle" data-toggle="dropdown">SchemaCrawler <b class="caret"></b></a>
 								<ul class="dropdown-menu">
-									<li class="active"><a href="" title="About SchemaCrawler">About SchemaCrawler</a></li>
+									<li ><a href="index.html" title="About SchemaCrawler">About SchemaCrawler</a></li>
 									<li ><a href="readme.html" title="Readme">Readme</a></li>
 									<li ><a href="who-uses.html" title="Who Uses">Who Uses</a></li>
 									<li ><a href="database-support.html" title="Database System Support">Database System Support</a></li>
@@ -140,79 +140,76 @@
 	<div class="row">
 		<div class="span12">
 			<div class="body-content">
-<div class="page-header">
- <h1>SchemaCrawler</h1>
-</div> 
-<p>SchemaCrawler is a free database schema discovery and comprehension tool. SchemaCrawler has a good mix useful features for data governance. You can <a href="schemacrawler_grep.html">search for database schema objects</a> using regular expressions, and output the schema and data in a readable text format. The output serves for database documentation, and is designed to be <a class="externalLink" href="http://en.wikipedia.org/wiki/Diff">diff-ed</a> against other database schemas. SchemaCrawler also generates <a href="diagramming.html">schema diagrams.</a> You can <a href="scripting.html">execute scripts</a> in any standard scripting language against your database. You can find potential schema design issues with <a href="lint.html">lint.</a></p> 
-<p>SchemaCrawler supports almost any database that has a JDBC driver, but for convenience is <a href="database-support.html">bundled with drivers</a> for some commonly used RDBMS systems. SchemaCrawler works with any operating system that supports Java SE 8 or better.</p> 
-<p>Consider supporting SchemaCrawler by making a <a class="externalLink" href="http://sourceforge.net/donate/index.php?group_id=148383">donation</a>.</p> 
 <div class="section"> 
- <h2 id="SchemaCrawler_Command-line">SchemaCrawler Command-line</h2> 
- <p>SchemaCrawler comes with a set of command-line tools that allow database metadata to be output as <a href="snapshot-examples/snapshot.text">plain text,</a> <a href="snapshot-examples/snapshot.csv">comma-separated text (CSV),</a> <a href="snapshot-examples/snapshot.html">HTML5,</a> <a href="snapshot-examples/snapshot.htmlx">HTML5 with embedded diagrams,</a> or <a href="snapshot-examples/snapshot.json">JavaScript object notation (JSON).</a> The HTML5 output is a combination of valid XML (that can be manipulated by XML tools or XSLT), and HTML that can be viewed in a browser. All formats are designed to be easy to <a class="externalLink" href="http://en.wikipedia.org/wiki/Diff">diff</a> , or find differences with other schemas that may have been output in the same format.</p> 
- <p>SchemaCrawler has <a href="schemacrawler_grep.html">grep</a> functionality that allows you to search for table and column names using regular expressions. SchemaCrawler is capable of creating entity-relationship diagrams in <a class="externalLink" href="http://www.graphviz.org/doc/info/lang.html">DOT format,</a> which <a class="externalLink" href="http://www.graphviz.org/">GraphViz</a> can convert into <a href="diagramming.html">schema diagrams.</a> SchemaCrawler has powerful scripting ability, using JavaScript, Groovy, Ruby or Python. A live connection is provided to the script context to allow you to select from or even modify your database. Examples are provided for all of these with the <a class="externalLink" href="http://sourceforge.net/projects/schemacrawler/files/">download</a>.</p> 
- <p>SchemaCrawler is integrated with, and allows you to write templates to generate SQL scripts or any other text output, using templating engines, such as <a class="externalLink" href="http://velocity.apache.org/">Apache Velocity</a> or <a class="externalLink" href="http://freemarker.org/">&lt;FreeMarker&gt;</a> . However, you will need to download Apache Velocity or &lt;FreeMarker&gt; separately, since these are not part of the SchemaCrawler download.</p> 
- <p>Complete SchemaCrawler command-line help is available with the -h or -help command-line options.</p> 
-</div> 
-<div class="section"> 
- <h2 id="SchemaCrawler_API">SchemaCrawler API</h2> 
- <p>SchemaCrawler is also a Java API that makes working with database metadata as easy as working with plain old Java objects. Java programmers need to access database metadata</p> 
- <ul> 
-  <li>in order to dynamically generate SQL statements</li> 
-  <li>when programmatically determining the capabilities of a given RDBMS</li> 
-  <li>when finding the names and types of tables and columns in the database</li> 
- </ul> 
- <p>Programmers can obtain database metadata using JDBC, but with the raw JDBC API database metadata is returned as result sets, not Java objects. Also, programmers are still responsible for managing resources, mapping into object structures, and handling exceptions. This makes using the JDBC API very cumbersome when it comes to metadata. Furthermore, the JDBC API is not very consistent. For example, to find the type of a table, you would look at the <tt>TABLE_TYPE</tt> , which has a string value, but for procedures, <tt>PROCEDURE_TYPE</tt> is an integer. An another example, is the <tt>getCatalogs()</tt> call, which returns a result set with exactly one column, in contrast to <tt>getStringFunctions()</tt> which returns a string containing the list of function names, separated by commas.</p> 
- <p>SchemaCrawler attempts to solve some of these problems by providing an API that is consistent and usable. Database metadata is provided in the form of plain old Java objects (POJOs). Some examples of the consistency and usability of the SchemaCrawler API are that:</p> 
- <ul> 
-  <li><tt>Table</tt> is an object that has a collection of <tt>Column</tt> objects, without requiring you to make additional calls</li> 
-  <li>Booleans are Java booleans, not an integer, a string, or null versus not-null, and enumerated values are Java enums, not integers</li> 
-  <li>Lists are always Java lists - <tt>java.util.List</tt></li> 
-  <li>You don’t worry about database resources or exception handling</li> 
-  <li>You can use standard Java programming idioms - for example, you can access the <tt>Table</tt> object from a <tt>Column</tt> object using <tt>getParent()</tt></li> 
- </ul> 
- <p>SchemaCrawler goes beyond what is available using JDBC, and can provide information on database triggers, sequences and synonyms as well.</p> 
- <p><img src="http://www.gnu.org/graphics/lgplv3-88x31.png" alt="LGPL" /> SchemaCrawler is free and open-source API available under the LGPL license. SchemaCrawler is written in Java, making it operating system agnostic. Since it leverages JDBC, it is also database independent. It deliberately doesn’t have any RDBMS-specific code. SchemaCrawler allows you to compare structures between two different database servers, or even two different database systems, from different vendors.</p> 
- <p>The sample code below demonstrates just how easy it is to use SchemaCrawler:</p> 
- <div class="source"> 
-  <pre>
-final SchemaCrawlerOptions options = new SchemaCrawlerOptions();
-// Set what details are required in the schema - this affects the
-// time taken to crawl the schema
-options.setSchemaInfoLevel(SchemaInfoLevel.standard());
-
-final Catalog catalog = SchemaCrawlerUtility.getCatalog(connection, options);
-for (final Schema schema: catalog.getSchemas())
-{
-  System.out.println(schema);
-  for (final Table table: catalog.getTables(schema))
-  {
-    System.out.print(&quot;o--&gt; &quot; + table);
-    for (final Column column: table.getColumns())
-    {
-      System.out.println(&quot;     o--&gt; &quot; + column);
-    }
-  }
-}
-</pre> 
+ <div class="page-header">
+  <h2 id="Project_Information">Project Information</h2>
  </div> 
- <p>For more details, please refer to the <a href="apidocs/index.html">javadocs</a>.</p> 
- <p>SchemaCrawler provides metadata for the following database objects: </p> 
- <ul> 
-  <li>Column data types</li> 
-  <li>Tables and views 
-   <ul> 
-    <li>Columns</li> 
-    <li>Primary keys</li> 
-    <li>Indexes</li> 
-    <li>Table constraints</li> 
-    <li>Triggers</li> 
-    <li>Foreign keys</li> 
-   </ul></li> 
-  <li>Routines, including functions and stored procedures</li> 
-  <li>Sequences</li> 
-  <li>Synonyms</li> 
-  <li>Privileges and grants</li> 
- </ul> 
+ <p>This document provides an overview of the various documents and links that are part of this project's general information. All of this content is automatically generated by <a class="externalLink" href="http://maven.apache.org">Maven</a> on behalf of the project.</p> 
+ <div class="section"> 
+  <h3 id="Overview">Overview</h3> 
+  <table border="0" class="bodyTable table table-striped table-hover"> 
+   <thead> 
+    <tr class="a"> 
+     <th>Document</th> 
+     <th>Description</th> 
+    </tr> 
+   </thead> 
+   <tbody> 
+    <tr class="b"> 
+     <td><a href="distribution-management.html">Distribution Management</a></td> 
+     <td>This document provides informations on the distribution management of this project.</td> 
+    </tr> 
+    <tr class="a"> 
+     <td><a href="index.html">About</a></td> 
+     <td>Free database schema discovery and comprehension tool</td> 
+    </tr> 
+    <tr class="b"> 
+     <td><a href="dependencies.html">Dependencies</a></td> 
+     <td>This document lists the project's dependencies and provides information on each dependency.</td> 
+    </tr> 
+    <tr class="a"> 
+     <td><a href="issue-tracking.html">Issue Tracking</a></td> 
+     <td>This is a link to the issue management system for this project. Issues (bugs, features, change requests) can be created and queried using this link.</td> 
+    </tr> 
+    <tr class="b"> 
+     <td><a href="plugins.html">Project Plugins</a></td> 
+     <td>This document lists the build plugins and the report plugins used by this project.</td> 
+    </tr> 
+    <tr class="a"> 
+     <td><a href="integration.html">Continuous Integration</a></td> 
+     <td>This is a link to the definitions of all continuous integration processes that builds and tests code on a frequent, regular basis.</td> 
+    </tr> 
+    <tr class="b"> 
+     <td><a href="license.html">Project License</a></td> 
+     <td>This is a link to the definitions of project licenses.</td> 
+    </tr> 
+    <tr class="a"> 
+     <td><a href="mail-lists.html">Mailing Lists</a></td> 
+     <td>This document provides subscription and archive information for this project's mailing lists.</td> 
+    </tr> 
+    <tr class="b"> 
+     <td><a href="team-list.html">Project Team</a></td> 
+     <td>This document provides information on the members of this project. These are the individuals who have contributed to the project in one form or another.</td> 
+    </tr> 
+    <tr class="a"> 
+     <td><a href="dependency-convergence.html">Dependency Convergence</a></td> 
+     <td>This document presents the convergence of dependency versions across the entire project, and its sub modules.</td> 
+    </tr> 
+    <tr class="b"> 
+     <td><a href="source-repository.html">Source Repository</a></td> 
+     <td>This is a link to the online source repository that can be viewed via a web browser.</td> 
+    </tr> 
+    <tr class="a"> 
+     <td><a href="plugin-management.html">Plugin Management</a></td> 
+     <td>This document lists the plugins that are defined through pluginManagement.</td> 
+    </tr> 
+    <tr class="b"> 
+     <td><a href="project-summary.html">Project Summary</a></td> 
+     <td>This document lists other related information of this project</td> 
+    </tr> 
+   </tbody> 
+  </table> 
+ </div> 
 </div>
 			</div>
 		</div>
@@ -229,8 +226,8 @@ for (final Schema schema: catalog.getSchemas())
 				<div class="span9 bottom-nav">
 					<ul class="nav nav-list">
 						<li class="nav-header">SchemaCrawler</li>
-						<li class="active">
-							<a href="#" title="About SchemaCrawler">About SchemaCrawler</a>
+						<li >
+							<a href="index.html" title="About SchemaCrawler">About SchemaCrawler</a>
 						</li>
 						<li >
 							<a href="readme.html" title="Readme">Readme</a>
