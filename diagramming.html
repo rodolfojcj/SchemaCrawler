@@ -144,7 +144,7 @@
 </div> 
 <p>SchemaCrawler generates database diagrams, using <a class="externalLink" href="http://www.graphviz.org/">Graphviz</a>. You can filter out tables, views, columns, stored procedure and functions based on regular expressions, using the <a href="faq.html#whats-schemacrawler-grep">grep</a> functionality.</p> 
 <p>SchemaCrawler is unique among database diagramming tools in that you do not need to know the table names or column names that you are interested in. All you need is a search expression, in the form of a regular expression. SchemaCrawler has powerful command-line options to match tables, and then find other related tables, whether they are parent or child tables. If your schema changes, you can simply regenerate the diagram, without having to know the exact changes that were made.</p> 
-<p>To use generate SchemaCrawler diagrams, for install <a class="externalLink" href="http://www.graphviz.org/">Graphviz</a>. Then you can run SchemaCrawler with the correct command-line options - for example, <tt>-command graph -outputformat png -outputfile=graph.png</tt> See the diagram example in the <a class="externalLink" href="https://sourceforge.net/projects/schemacrawler/files/SchemaCrawler%20Examples/">SchemaCrawler examples</a> download. An example of a SchemaCrawler database diagram is below.</p> 
+<p>To use generate SchemaCrawler diagrams, for install <a class="externalLink" href="http://www.graphviz.org/">Graphviz</a>. Then you can run SchemaCrawler with the correct command-line options - for example, <tt>-command graph -outputformat png -outputfile=graph.png</tt> See the diagram example in the <a class="externalLink" href="http://github.com/sualeh/SchemaCrawler/releases/">SchemaCrawler examples</a> download. An example of a SchemaCrawler database diagram is below.</p> 
 <p>You can provide additional GraphViz command-line options using the <tt>SC_GRAPHVIZ_OPTS</tt> environmental variable, or pass in the additional arguments using the <tt>SC_GRAPHVIZ_OPTS</tt> Java system property. SchemaCrawler does not set the dpi, or resolution of generated graphs. A useful GraphViz command-line option to set is <tt>-Gdpi=300</tt>.</p> 
 <p>You can decide whether foreign-key names, column ordinal numbers, and schema names are displayed by setting the following properties in the SchemaCrawler configuration file, <tt>schemacrawler.config.properties</tt>.</p> 
 <div class="source"> 
@@ -153,7 +153,7 @@ schemacrawler.format.hide_foreignkey_names=true
 schemacrawler.format.show_unqualified_names=true
 </pre> 
 </div> 
-<p>For more details, see the diagram example in the <a class="externalLink" href="https://sourceforge.net/projects/schemacrawler/files/SchemaCrawler%20Examples/">SchemaCrawler examples</a> download.</p> 
+<p>For more details, see the diagram example in the <a class="externalLink" href="http://github.com/sualeh/SchemaCrawler/releases/">SchemaCrawler examples</a> download.</p> 
 <p><a href="images/diagram.png" title="SchemaCrawler database diagram" data-lightbox="page"> <img src="images/diagram.png" width="200" alt="" /> </a></p> 
 <div class="section"> 
  <h2 id="Database_Diagram_Options">Database Diagram Options</h2> 
