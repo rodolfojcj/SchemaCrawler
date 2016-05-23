@@ -1,7 +1,7 @@
 [
 {
   "schemaCrawlerInfo": {
-    "productVersion": "14.08.02",
+    "productVersion": "14.08.03",
     "productName": "SchemaCrawler"
   },
   "tables": [
@@ -59,6 +59,7 @@
       ],
       "foreignKeys": [{
         "name": "FK_Z_AUTHOR",
+        "definition": "",
         "deleteRule": "no action",
         "columnReferences": [{
           "pkColumn": "PUBLIC.BOOKS.AUTHORS.ID",
@@ -208,7 +209,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "ID"
+            "name": "ID",
+            "definition": ""
           },
           "unique": true,
           "name": "SYS_IDX_PK_AUTHORS_10097",
@@ -218,11 +220,13 @@
           "columns": [
             {
               "sortSequence": "ascending",
-              "name": "LASTNAME"
+              "name": "LASTNAME",
+              "definition": ""
             },
             {
               "sortSequence": "ascending",
-              "name": "FIRSTNAME"
+              "name": "FIRSTNAME",
+              "definition": ""
             }
           ],
           "unique": false,
@@ -233,19 +237,23 @@
           "columns": [
             {
               "sortSequence": "ascending",
-              "name": "CITY"
+              "name": "CITY",
+              "definition": ""
             },
             {
               "sortSequence": "ascending",
-              "name": "STATE"
+              "name": "STATE",
+              "definition": ""
             },
             {
               "sortSequence": "ascending",
-              "name": "POSTALCODE"
+              "name": "POSTALCODE",
+              "definition": ""
             },
             {
               "sortSequence": "ascending",
-              "name": "COUNTRY"
+              "name": "COUNTRY",
+              "definition": ""
             }
           ],
           "unique": false,
@@ -259,7 +267,8 @@
       "primaryKey": {
         "columns": {
           "sortSequence": "ascending",
-          "name": "ID"
+          "name": "ID",
+          "definition": ""
         },
         "unique": true,
         "name": "PK_AUTHORS",
@@ -419,6 +428,7 @@
       "foreignKeys": [
         {
           "name": "FK_Z_AUTHOR",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.BOOKS.AUTHORS.ID",
@@ -428,6 +438,7 @@
         },
         {
           "name": "FK_Y_BOOK",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.BOOKS.BOOKS.ID",
@@ -500,7 +511,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "AUTHORID"
+            "name": "AUTHORID",
+            "definition": ""
           },
           "unique": false,
           "name": "SYS_IDX_10118",
@@ -509,7 +521,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "BOOKID"
+            "name": "BOOKID",
+            "definition": ""
           },
           "unique": false,
           "name": "SYS_IDX_10116",
@@ -519,11 +532,13 @@
           "columns": [
             {
               "sortSequence": "ascending",
-              "name": "BOOKID"
+              "name": "BOOKID",
+              "definition": ""
             },
             {
               "sortSequence": "ascending",
-              "name": "AUTHORID"
+              "name": "AUTHORID",
+              "definition": ""
             }
           ],
           "unique": true,
@@ -600,6 +615,7 @@
       "foreignKeys": [
         {
           "name": "FK_Y_BOOK",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.BOOKS.BOOKS.ID",
@@ -609,6 +625,7 @@
         },
         {
           "name": "FK_PREVIOUSEDITION",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.BOOKS.BOOKS.ID",
@@ -730,7 +747,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "ID"
+            "name": "ID",
+            "definition": ""
           },
           "unique": true,
           "name": "SYS_IDX_PK_BOOKS_10105",
@@ -739,7 +757,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "PREVIOUSEDITIONID"
+            "name": "PREVIOUSEDITIONID",
+            "definition": ""
           },
           "unique": true,
           "name": "UIDX_PREVIOUSEDITION",
@@ -748,7 +767,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "PREVIOUSEDITIONID"
+            "name": "PREVIOUSEDITIONID",
+            "definition": ""
           },
           "unique": false,
           "name": "SYS_IDX_10109",
@@ -761,7 +781,8 @@
       "primaryKey": {
         "columns": {
           "sortSequence": "ascending",
-          "name": "ID"
+          "name": "ID",
+          "definition": ""
         },
         "unique": true,
         "name": "PK_BOOKS",
@@ -933,7 +954,8 @@
       "indexes": [{
         "columns": {
           "sortSequence": "ascending",
-          "name": "ID"
+          "name": "ID",
+          "definition": ""
         },
         "unique": true,
         "name": "SYS_IDX_SYS_PK_10092_10093",
@@ -945,7 +967,8 @@
       "primaryKey": {
         "columns": {
           "sortSequence": "ascending",
-          "name": "ID"
+          "name": "ID",
+          "definition": ""
         },
         "unique": true,
         "name": "SYS_PK_10092",
@@ -1007,6 +1030,7 @@
       "foreignKeys": [
         {
           "name": "FK_PUBLICATION_JOIN",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.PUBLICATIONS.ID",
@@ -1016,6 +1040,7 @@
         },
         {
           "name": "FK_WRITER_JOIN",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.WRITERS.ID",
@@ -1098,7 +1123,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "WRITERID"
+            "name": "WRITERID",
+            "definition": ""
           },
           "unique": false,
           "name": "SYS_IDX_10198",
@@ -1107,7 +1133,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "ID"
+            "name": "ID",
+            "definition": ""
           },
           "unique": true,
           "name": "SYS_IDX_PK_EXTRA_PK_10194",
@@ -1116,7 +1143,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "PUBLICATIONID"
+            "name": "PUBLICATIONID",
+            "definition": ""
           },
           "unique": false,
           "name": "SYS_IDX_10200",
@@ -1129,7 +1157,8 @@
       "primaryKey": {
         "columns": {
           "sortSequence": "ascending",
-          "name": "ID"
+          "name": "ID",
+          "definition": ""
         },
         "unique": true,
         "name": "PK_EXTRA_PK",
@@ -1265,6 +1294,7 @@
       "foreignKeys": [
         {
           "name": "FK_PUBLICATION_JOIN",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.PUBLICATIONS.ID",
@@ -1274,6 +1304,7 @@
         },
         {
           "name": "FK_PUBLICATION",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.PUBLICATIONS.ID",
@@ -1283,6 +1314,7 @@
         },
         {
           "name": "FK_WRITERS_PUBLICATION",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.PUBLICATIONS.ID",
@@ -1292,6 +1324,7 @@
         },
         {
           "name": "FK_PUBLICATIONS_WRITER",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.WRITERS.ID",
@@ -1424,7 +1457,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "WRITERID"
+            "name": "WRITERID",
+            "definition": ""
           },
           "unique": false,
           "name": "SYS_IDX_10179",
@@ -1433,7 +1467,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "ID"
+            "name": "ID",
+            "definition": ""
           },
           "unique": true,
           "name": "SYS_IDX_PK_PUBLICATIONS_10175",
@@ -1446,7 +1481,8 @@
       "primaryKey": {
         "columns": {
           "sortSequence": "ascending",
-          "name": "ID"
+          "name": "ID",
+          "definition": ""
         },
         "unique": true,
         "name": "PK_PUBLICATIONS",
@@ -1508,6 +1544,7 @@
       "foreignKeys": [
         {
           "name": "FK_PUBLICATION",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.PUBLICATIONS.ID",
@@ -1517,6 +1554,7 @@
         },
         {
           "name": "FK_WRITER",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.WRITERS.ID",
@@ -1578,7 +1616,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "WRITERID"
+            "name": "WRITERID",
+            "definition": ""
           },
           "unique": false,
           "name": "SYS_IDX_10186",
@@ -1587,7 +1626,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "PUBLICATIONID"
+            "name": "PUBLICATIONID",
+            "definition": ""
           },
           "unique": false,
           "name": "SYS_IDX_10188",
@@ -1654,6 +1694,7 @@
       "foreignKeys": [
         {
           "name": "FK_WRITERS_PUBLICATION",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.PUBLICATIONS.ID",
@@ -1663,6 +1704,7 @@
         },
         {
           "name": "FK_WRITER_JOIN",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.WRITERS.ID",
@@ -1672,6 +1714,7 @@
         },
         {
           "name": "FK_PUBLICATIONS_WRITER",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.WRITERS.ID",
@@ -1681,6 +1724,7 @@
         },
         {
           "name": "FK_WRITER",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.WRITERS.ID",
@@ -1690,6 +1734,7 @@
         },
         {
           "name": "FK_ΠΊΝΑΚΑΒΆΣΗΣΔΕΔΟΜΈΝΩΝ_PUBLICATIONS",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.FOR_LINT.WRITERS.ID",
@@ -1947,7 +1992,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "ID"
+            "name": "ID",
+            "definition": ""
           },
           "unique": true,
           "name": "SYS_IDX_PK_WRITERS_10165",
@@ -1956,7 +2002,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "PUBLICATION_ID"
+            "name": "PUBLICATION_ID",
+            "definition": ""
           },
           "unique": false,
           "name": "SYS_IDX_10208",
@@ -1966,11 +2013,13 @@
           "columns": [
             {
               "sortSequence": "ascending",
-              "name": "CITY"
+              "name": "CITY",
+              "definition": ""
             },
             {
               "sortSequence": "ascending",
-              "name": "STATE"
+              "name": "STATE",
+              "definition": ""
             }
           ],
           "unique": false,
@@ -1981,11 +2030,13 @@
           "columns": [
             {
               "sortSequence": "ascending",
-              "name": "EMAIL1"
+              "name": "EMAIL1",
+              "definition": ""
             },
             {
               "sortSequence": "ascending",
-              "name": "COUNTRY"
+              "name": "COUNTRY",
+              "definition": ""
             }
           ],
           "unique": true,
@@ -1996,11 +2047,13 @@
           "columns": [
             {
               "sortSequence": "ascending",
-              "name": "LASTNAME"
+              "name": "LASTNAME",
+              "definition": ""
             },
             {
               "sortSequence": "ascending",
-              "name": "FIRSTNAME"
+              "name": "FIRSTNAME",
+              "definition": ""
             }
           ],
           "unique": false,
@@ -2011,19 +2064,23 @@
           "columns": [
             {
               "sortSequence": "ascending",
-              "name": "CITY"
+              "name": "CITY",
+              "definition": ""
             },
             {
               "sortSequence": "ascending",
-              "name": "STATE"
+              "name": "STATE",
+              "definition": ""
             },
             {
               "sortSequence": "ascending",
-              "name": "POSTALCODE"
+              "name": "POSTALCODE",
+              "definition": ""
             },
             {
               "sortSequence": "ascending",
-              "name": "COUNTRY"
+              "name": "COUNTRY",
+              "definition": ""
             }
           ],
           "unique": false,
@@ -2037,7 +2094,8 @@
       "primaryKey": {
         "columns": {
           "sortSequence": "ascending",
-          "name": "ID"
+          "name": "ID",
+          "definition": ""
         },
         "unique": true,
         "name": "PK_WRITERS",
@@ -2098,6 +2156,7 @@
       ],
       "foreignKeys": [{
         "name": "FK_ΠΊΝΑΚΑΒΆΣΗΣΔΕΔΟΜΈΝΩΝ_PUBLICATIONS",
+        "definition": "",
         "deleteRule": "no action",
         "columnReferences": [{
           "pkColumn": "PUBLIC.FOR_LINT.WRITERS.ID",
@@ -2164,7 +2223,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "ΣΤΉΛΗΒΆΣΗΣΔΕΔΟΜΈΝΩΝ"
+            "name": "ΣΤΉΛΗΒΆΣΗΣΔΕΔΟΜΈΝΩΝ",
+            "definition": ""
           },
           "unique": true,
           "name": "SYS_IDX_PK_ΠΊΝΑΚΑΒΆΣΗΣΔΕΔΟΜΈΝΩΝ_10203",
@@ -2173,7 +2233,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "ΣΥΓΓΡΑΦΈΑΣ"
+            "name": "ΣΥΓΓΡΑΦΈΑΣ",
+            "definition": ""
           },
           "unique": false,
           "name": "SYS_IDX_10205",
@@ -2186,7 +2247,8 @@
       "primaryKey": {
         "columns": {
           "sortSequence": "ascending",
-          "name": "ΣΤΉΛΗΒΆΣΗΣΔΕΔΟΜΈΝΩΝ"
+          "name": "ΣΤΉΛΗΒΆΣΗΣΔΕΔΟΜΈΝΩΝ",
+          "definition": ""
         },
         "unique": true,
         "name": "PK_ΠΊΝΑΚΑΒΆΣΗΣΔΕΔΟΜΈΝΩΝ",
@@ -2247,6 +2309,7 @@
       ],
       "foreignKeys": [{
         "name": "FK_SALES_REGIONS",
+        "definition": "",
         "deleteRule": "no action",
         "columnReferences": [
           {
@@ -2340,11 +2403,13 @@
         "columns": [
           {
             "sortSequence": "ascending",
-            "name": "POSTALCODE"
+            "name": "POSTALCODE",
+            "definition": ""
           },
           {
             "sortSequence": "ascending",
-            "name": "COUNTRY"
+            "name": "COUNTRY",
+            "definition": ""
           }
         ],
         "unique": true,
@@ -2358,11 +2423,13 @@
         "columns": [
           {
             "sortSequence": "ascending",
-            "name": "POSTALCODE"
+            "name": "POSTALCODE",
+            "definition": ""
           },
           {
             "sortSequence": "ascending",
-            "name": "COUNTRY"
+            "name": "COUNTRY",
+            "definition": ""
           }
         ],
         "unique": true,
@@ -2428,6 +2495,7 @@
       "foreignKeys": [
         {
           "name": "FK_SALES_SALESDATA",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [{
             "pkColumn": "PUBLIC.\"PUBLISHER SALES\".SALESDATA.SALESDATAID",
@@ -2437,6 +2505,7 @@
         },
         {
           "name": "FK_SALES_REGIONS",
+          "definition": "",
           "deleteRule": "no action",
           "columnReferences": [
             {
@@ -2548,7 +2617,8 @@
         {
           "columns": {
             "sortSequence": "ascending",
-            "name": "SALESDATAID"
+            "name": "SALESDATAID",
+            "definition": ""
           },
           "unique": false,
           "name": "SYS_IDX_10158",
@@ -2558,11 +2628,13 @@
           "columns": [
             {
               "sortSequence": "ascending",
-              "name": "POSTALCODE"
+              "name": "POSTALCODE",
+              "definition": ""
             },
             {
               "sortSequence": "ascending",
-              "name": "COUNTRY"
+              "name": "COUNTRY",
+              "definition": ""
             }
           ],
           "unique": false,
@@ -2629,6 +2701,7 @@
       ],
       "foreignKeys": [{
         "name": "FK_SALES_SALESDATA",
+        "definition": "",
         "deleteRule": "no action",
         "columnReferences": [{
           "pkColumn": "PUBLIC.\"PUBLISHER SALES\".SALESDATA.SALESDATAID",
@@ -2671,7 +2744,8 @@
       "indexes": [{
         "columns": {
           "sortSequence": "ascending",
-          "name": "SALESDATAID"
+          "name": "SALESDATAID",
+          "definition": ""
         },
         "unique": true,
         "name": "SYS_IDX_UQ_CUSTOMERS_10150",
@@ -2853,6 +2927,14 @@
       "searchable": "searchable except with where .. like"
     },
     {
+      "nullable": true,
+      "databaseSpecificTypeName": "UUID",
+      "userDefined": false,
+      "autoIncrementable": false,
+      "basedOn": "",
+      "searchable": "searchable"
+    },
+    {
       "createParameters": "LENGTH",
       "nullable": true,
       "databaseSpecificTypeName": "VARBINARY",
@@ -2908,7 +2990,7 @@
     }
   ],
   "databaseInfo": {
-    "databaseProductVersion": "2.3.3",
+    "databaseProductVersion": "2.3.4",
     "databaseProductName": "HSQL Database Engine",
     "databaseProperties": [
       {
@@ -2979,6 +3061,7 @@
           "readonly",
           "runtime.gc_interval",
           "sql.avg_scale",
+          "sql.char_literal",
           "sql.compare_in_locale",
           "sql.concat_nulls",
           "sql.convert_trunc",
@@ -2990,6 +3073,7 @@
           "sql.enforce_tdc_update",
           "sql.enforce_types",
           "sql.ignore_case",
+          "sql.live_object",
           "sql.longvar_is_lob",
           "sql.nulls_first",
           "sql.nulls_order",
@@ -3011,6 +3095,7 @@
           "textdb.fs",
           "textdb.ignore_first",
           "textdb.lvs",
+          "textdb.qc",
           "textdb.quoted",
           "textdb.vs"
         ]
@@ -3851,6 +3936,7 @@
           "BIGINT",
           "VARBINARY",
           "BINARY",
+          "UUID",
           "CHARACTER",
           "NUMERIC",
           "DECIMAL",
@@ -3884,7 +3970,7 @@
     "databaseUserName": "SA"
   },
   "schemaCrawlerHeaderInfo": {
-    "crawlTimestamp": "2016-05-15 20:08:20",
+    "crawlTimestamp": "2016-05-22 22:13:50",
     "title": "Details of Example Database"
   },
   "routines": [
@@ -4181,16 +4267,25 @@
     {
       "name": "DELETE_UNUSED_LOBS",
       "fullName": "PUBLIC.SYSTEM_LOBS.DELETE_UNUSED_LOBS",
-      "definition": "CREATE PROCEDURE SYSTEM_LOBS.DELETE_UNUSED_LOBS(IN LIMIT_ID BIGINT) SPECIFIC DELETE_UNUSED_LOBS_10057 LANGUAGE SQL NOT DETERMINISTIC MODIFIES SQL DATA NEW SAVEPOINT LEVEL BEGIN ATOMIC DECLARE TABLE TEMP_IDS(TEMP_ID INT);DECLARE TEMP_COUNT INT DEFAULT 0;REPEAT INSERT INTO MODULE.TEMP_IDS(TEMP_ID) SELECT LOB_IDS.LOB_ID FROM SYSTEM_LOBS.LOB_IDS WHERE LOB_USAGE_COUNT=0 AND LOB_IDS.LOB_ID<LIMIT_ID LIMIT 1000;INSERT INTO SYSTEM_LOBS.BLOCKS(BLOCK_ADDR,BLOCK_COUNT,TX_ID)(SELECT BLOCK_ADDR,BLOCK_COUNT,0 FROM SYSTEM_LOBS.LOBS WHERE LOBS.LOB_ID IN(SELECT TEMP_ID FROM MODULE.TEMP_IDS));DELETE FROM SYSTEM_LOBS.LOBS WHERE LOBS.LOB_ID IN(SELECT TEMP_ID FROM MODULE.TEMP_IDS);DELETE FROM SYSTEM_LOBS.PARTS WHERE LOB_ID IN(SELECT TEMP_ID FROM MODULE.TEMP_IDS);DELETE FROM SYSTEM_LOBS.LOB_IDS WHERE LOB_IDS.LOB_ID IN(SELECT TEMP_ID FROM MODULE.TEMP_IDS);GET DIAGNOSTICS TEMP_COUNT=ROW_COUNT;DELETE FROM MODULE.TEMP_IDS;UNTIL TEMP_COUNT<1000 END REPEAT;END",
+      "definition": "CREATE PROCEDURE SYSTEM_LOBS.DELETE_UNUSED_LOBS(IN LIMIT_ID BIGINT,OUT TOTAL_COUNT INTEGER) SPECIFIC DELETE_UNUSED_LOBS_10057 LANGUAGE SQL NOT DETERMINISTIC MODIFIES SQL DATA NEW SAVEPOINT LEVEL BEGIN ATOMIC DECLARE TABLE TEMP_IDS(TEMP_ID INT);DECLARE TEMP_COUNT INT DEFAULT 0;DECLARE TOTAL INT DEFAULT 0;REPEAT INSERT INTO MODULE.TEMP_IDS(TEMP_ID) SELECT LOB_IDS.LOB_ID FROM SYSTEM_LOBS.LOB_IDS WHERE LOB_USAGE_COUNT=0 AND LOB_IDS.LOB_ID<LIMIT_ID LIMIT 1000;INSERT INTO SYSTEM_LOBS.BLOCKS(BLOCK_ADDR,BLOCK_COUNT,TX_ID)(SELECT BLOCK_ADDR,BLOCK_COUNT,0 FROM SYSTEM_LOBS.LOBS WHERE LOBS.LOB_ID IN(SELECT TEMP_ID FROM MODULE.TEMP_IDS));DELETE FROM SYSTEM_LOBS.LOBS WHERE LOBS.LOB_ID IN(SELECT TEMP_ID FROM MODULE.TEMP_IDS);DELETE FROM SYSTEM_LOBS.PARTS WHERE LOB_ID IN(SELECT TEMP_ID FROM MODULE.TEMP_IDS);DELETE FROM SYSTEM_LOBS.LOB_IDS WHERE LOB_IDS.LOB_ID IN(SELECT TEMP_ID FROM MODULE.TEMP_IDS);GET DIAGNOSTICS TEMP_COUNT=ROW_COUNT;SET TOTAL=TOTAL+TEMP_COUNT;DELETE FROM MODULE.TEMP_IDS;UNTIL TEMP_COUNT<1000 END REPEAT;SET TOTAL_COUNT=TOTAL;END",
       "specificName": "DELETE_UNUSED_LOBS_10057",
       "type": "procedure",
-      "parameters": [{
-        "databaseSpecificType": "BIGINT",
-        "dataType": "BIGINT",
-        "name": "LIMIT_ID",
-        "width": "",
-        "type": "in"
-      }],
+      "parameters": [
+        {
+          "databaseSpecificType": "BIGINT",
+          "dataType": "BIGINT",
+          "name": "LIMIT_ID",
+          "width": "",
+          "type": "in"
+        },
+        {
+          "databaseSpecificType": "INTEGER",
+          "dataType": "INTEGER",
+          "name": "TOTAL_COUNT",
+          "width": "",
+          "type": "out"
+        }
+      ],
       "returnType": "no result",
       "remarks": ""
     },
@@ -4222,7 +4317,7 @@
     {
       "name": "MERGE_EMPTY_BLOCKS",
       "fullName": "PUBLIC.SYSTEM_LOBS.MERGE_EMPTY_BLOCKS",
-      "definition": "CREATE PROCEDURE SYSTEM_LOBS.MERGE_EMPTY_BLOCKS() SPECIFIC MERGE_EMPTY_BLOCKS_10078 LANGUAGE SQL NOT DETERMINISTIC MODIFIES SQL DATA NEW SAVEPOINT LEVEL BEGIN ATOMIC DECLARE BL_BASE_ADDR INT DEFAULT-1;DECLARE BL_BASE_COUNT INT;DECLARE BL_ADDR INT;DECLARE BL_COUNT INT;REPEAT SET BL_BASE_COUNT=NULL;SET(BL_BASE_ADDR,BL_BASE_COUNT)=(SELECT BLOCK_ADDR,BLOCK_COUNT FROM SYSTEM_LOBS.BLOCKS WHERE BLOCK_ADDR>BL_BASE_ADDR ORDER BY BLOCK_ADDR FETCH 1 ROW ONLY);IF BL_BASE_COUNT IS NOT NULL THEN REPEAT SET BL_ADDR=NULL;SET(BL_ADDR,BL_COUNT)=(SELECT BLOCK_ADDR,BLOCK_COUNT FROM SYSTEM_LOBS.BLOCKS WHERE BLOCK_ADDR=BL_BASE_ADDR+BL_BASE_COUNT);IF BL_ADDR IS NOT NULL THEN SET BL_BASE_COUNT=BL_BASE_COUNT+BL_COUNT;END IF;UNTIL BL_ADDR IS NULL END REPEAT;DELETE FROM SYSTEM_LOBS.BLOCKS WHERE BLOCK_ADDR>=BL_BASE_ADDR AND BLOCK_ADDR<BL_BASE_ADDR+BL_BASE_COUNT;INSERT INTO SYSTEM_LOBS.BLOCKS(BLOCK_ADDR,BLOCK_COUNT,TX_ID) VALUES BL_BASE_ADDR,BL_BASE_COUNT,0;END IF;UNTIL BL_BASE_COUNT IS NULL END REPEAT;END",
+      "definition": "CREATE PROCEDURE SYSTEM_LOBS.MERGE_EMPTY_BLOCKS() SPECIFIC MERGE_EMPTY_BLOCKS_10078 LANGUAGE SQL NOT DETERMINISTIC MODIFIES SQL DATA NEW SAVEPOINT LEVEL BEGIN ATOMIC DECLARE BL_BASE_ADDR INT DEFAULT-1;DECLARE BL_BASE_COUNT INT;DECLARE BL_ADDR INT;DECLARE BL_COUNT INT;DECLARE BL_MERGE BOOLEAN;REPEAT SET BL_BASE_COUNT=NULL;SET(BL_BASE_ADDR,BL_BASE_COUNT)=(SELECT BLOCK_ADDR,BLOCK_COUNT FROM SYSTEM_LOBS.BLOCKS WHERE BLOCK_ADDR>BL_BASE_ADDR ORDER BY BLOCK_ADDR FETCH 1 ROW ONLY);IF BL_BASE_COUNT IS NOT NULL THEN SET BL_MERGE=FALSE;REPEAT SET BL_ADDR=NULL;SET(BL_ADDR,BL_COUNT)=(SELECT BLOCK_ADDR,BLOCK_COUNT FROM SYSTEM_LOBS.BLOCKS WHERE BLOCK_ADDR=BL_BASE_ADDR+BL_BASE_COUNT);IF BL_ADDR IS NOT NULL THEN SET BL_BASE_COUNT=BL_BASE_COUNT+BL_COUNT;SET BL_MERGE=TRUE;END IF;UNTIL BL_ADDR IS NULL END REPEAT;IF BL_MERGE THEN DELETE FROM SYSTEM_LOBS.BLOCKS WHERE BLOCK_ADDR>=BL_BASE_ADDR AND BLOCK_ADDR<BL_BASE_ADDR+BL_BASE_COUNT;INSERT INTO SYSTEM_LOBS.BLOCKS(BLOCK_ADDR,BLOCK_COUNT,TX_ID) VALUES BL_BASE_ADDR,BL_BASE_COUNT,0;END IF;END IF;UNTIL BL_BASE_COUNT IS NULL END REPEAT;END",
       "specificName": "MERGE_EMPTY_BLOCKS_10078",
       "type": "procedure",
       "parameters": [],
@@ -4231,7 +4326,7 @@
     }
   ],
   "jdbcDriverInfo": {
-    "driverVersion": "2.3.3",
+    "driverVersion": "2.3.4",
     "isJDBCCompliant": "true",
     "driverClassName": "org.hsqldb.jdbc.JDBCDriver",
     "driverName": "HSQL Database Engine Driver",
