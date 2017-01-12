@@ -1,7 +1,7 @@
 [
 {
   "schemaCrawlerInfo": {
-    "productVersion": "14.12.01",
+    "productVersion": "14.14.01",
     "productName": "SchemaCrawler"
   },
   "tables": [
@@ -4660,7 +4660,7 @@
     "databaseUserName": "SA"
   },
   "schemaCrawlerHeaderInfo": {
-    "crawlTimestamp": "2016-12-29 00:31:57",
+    "crawlTimestamp": "2017-01-11 22:14:32",
     "title": "Details of Example Database"
   },
   "routines": [
